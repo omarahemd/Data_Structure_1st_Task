@@ -2,19 +2,29 @@
 #include <string>
 template<class Type> stackADT<Type>::stackADT(int x)
 {
-     stacktop = 0;
-    list = new Type[max_size];
-    for (int i = 0 ; i < x ; i++)
+    stacktop = 0;
+    max_size = x;
+    list = new Type[x];
+   
+}
+template<class Type> void stackADT<Type>::intialize_int()
+{
+     for (int i = 0 ; i < max_size ; i++)
     {
         cout<<"enter the stack["<<i+1<<"] ";
         cin>>list[i];
         stacktop++;
     }
-
 }
-template<class Type> void stackADT<Type>::intialize()
+template<class Type> void stackADT<Type>::intialize_string()
 {
-  
+    char c;
+      for(int i = 0 ; i < max_size ; i++)
+    {
+        cout<<"enter the stack["<<i+1<<"] ";
+        getline(cin , list[i]);
+        stacktop++;
+    }
 }
 template <class Type> bool stackADT<Type>::isfull()
 {
@@ -59,7 +69,16 @@ template <class Type> void stackADT<Type>::TraverseStack()
 }
 template <class Type> void stackADT<Type>::reverse()
 {
-
+    string s;
+    for(int i = 0 ; i < max_size; i++)
+    {
+        s = list[i];
+        for(int j = s.size() ; j>=0; j--)
+    {
+        cout<<s[j];
+    }
+    cout<<"\n";
+    } 
 }
 template <class Type> void stackADT<Type>::ClearStack()
 {

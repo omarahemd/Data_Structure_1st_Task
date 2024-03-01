@@ -5,13 +5,14 @@ class stackADT
 {
     private:
     Type *list;
-    int max_size = 100;
+    int max_size;
     int stacktop ; 
     void copystack(const stackADT<Type>&);
     public:
     bool isempty();
     bool isfull();
-    void intialize();
+    void intialize_int();
+    void intialize_string();
     void display();
     void puch(const Type &newitem);
     void pop();

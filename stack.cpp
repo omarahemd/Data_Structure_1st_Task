@@ -3,7 +3,8 @@
 int main()
 {
     stackADT<string> st(3);
+    st.intialize_string();
     st.reverse();
-    st.display();
-    int hey;
+
+    
 }
