@@ -24,5 +24,4 @@ class stackADT
     stackADT(int);
     stackADT(const stackADT<Type>&);
     ~stackADT();
-
 };
